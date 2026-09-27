@@ -1,0 +1,29 @@
+.scene { position: absolute; inset: 0; overflow: hidden; }
+.scene--warm { background: var(--scene-warm); }
+.scene--cool { background: var(--scene-cool); }
+.scene--neutral { background: var(--scene-neutral); }
+.scene--dark { background: var(--scene-dark); color: var(--surface); }
+.scene--outdoor { background: var(--scene-outdoor); }
+.scene__label {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  font: 600 11px/1.3 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: currentColor;
+  opacity: 0.45;
+  max-width: 60%;
+}
+
+.footage { position: absolute; inset: 0; background: color-mix(in srgb, var(--ink) 10%, var(--surface)); border-radius: 4px; overflow: hidden; }
+.footage .placeholder { border-radius: 4px; }
+.footage__loader { position: absolute; inset: 0; display: grid; place-items: center; }
+.footage__spinner { width: 44px; height: 44px; border-radius: 50%; border: 4px solid color-mix(in srgb, var(--ink) 15%, transparent); border-top-color: var(--ink-2); }
+
+.dim { position: absolute; inset: 0; background: var(--backdrop); }
+
+.split { position: absolute; inset: 0; display: flex; }
+.split__half { position: relative; height: 100%; overflow: hidden; }
+.split__divider { width: 2px; background: var(--ink); opacity: 0.8; flex: none; }
+.group { position: absolute; inset: 0; }

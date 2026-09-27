@@ -1,0 +1,73 @@
+.rt-stress { font-weight: 700; }
+.rt-label {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0.08em 0.4em;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-chip);
+  opacity: 0.9;
+  white-space: nowrap;
+}
+.rt-tbc {
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0 0.3em;
+  border-radius: 4px;
+}
+
+/* Placeholder: every missing asset looks like this, on purpose. */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 16px;
+  border: 1.5px dashed color-mix(in srgb, var(--ink) 22%, transparent);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+  font: 600 12px/1.35 var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.placeholder small { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; opacity: 0.8; margin-top: 2px; }
+.placeholder--stripes {
+  background: repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--ink) 6%, transparent) 14px 28px);
+}
+
+.asset-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.asset-media--contain { object-fit: contain; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 600 13px/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: var(--radius-chip);
+  border: 1.5px solid currentColor;
+  white-space: nowrap;
+}
+.chip--neutral { color: var(--ink); background: var(--surface); }
+.chip--waiting { color: var(--amber); background: var(--amber-soft); }
+.chip--bad { color: var(--red); background: var(--red-soft); }
+.chip--good { color: var(--green); background: var(--green-soft); }
+.chip--info { color: var(--blue); background: var(--blue-soft); }
+.chip--ink { color: var(--surface); background: var(--ink); border-color: var(--ink); }
+
+.icon { width: 1em; height: 1em; flex: none; }
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: currentColor;
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }

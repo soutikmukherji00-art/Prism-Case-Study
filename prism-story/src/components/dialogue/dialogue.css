@@ -1,0 +1,23 @@
+.dialogue { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 14px; padding: 8px; }
+.dialogue--top { justify-content: flex-start; }
+.dialogue--center { justify-content: center; }
+.dialogue--bottom { justify-content: flex-end; }
+
+.bubble {
+  position: relative;
+  max-width: 78%;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-bubble);
+  padding: 10px 16px 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.bubble--left { align-self: flex-start; border-bottom-left-radius: 4px; }
+.bubble--right { align-self: flex-end; border-bottom-right-radius: 4px; }
+.bubble--center { align-self: center; text-align: center; }
+.bubble__who { font: 700 11px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--speaker); }
+.bubble__text { font: 500 21px/1.35 var(--font-dialogue); color: var(--ink); }
+.dialogue--l .bubble__text { font-size: 28px; }

@@ -1,0 +1,28 @@
+.callout-wrap { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; }
+.callout-wrap--top { justify-content: flex-start; }
+.callout-wrap--bottom { justify-content: flex-end; }
+.callout {
+  --tone: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  border-left: 6px solid var(--tone);
+  border-radius: 6px;
+  padding: 22px 26px 24px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 100%;
+  overflow: hidden;
+}
+.callout--alert { --tone: var(--red); }
+.callout--insight { --tone: var(--blue); }
+.callout--method { --tone: var(--ink-2); }
+.callout--wrong { --tone: var(--amber); }
+.callout--result { --tone: var(--green); }
+.callout__label { font: 700 12px/1.3 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--tone); }
+.callout__title { font: 700 28px/1.2 var(--font-display); color: var(--ink); }
+.callout__body { font: 400 18px/1.5 var(--font-body); color: var(--ink); opacity: 0.88; }
+.callout__item { font: 400 17px/1.5 var(--font-body); color: var(--ink); }
+.callout__item strong { font-weight: 700; }
+.callout__ours { margin-top: 6px; padding-top: 12px; border-top: 1px dashed color-mix(in srgb, var(--ink) 30%, transparent); font: 500 17px/1.5 var(--font-body); color: var(--ink); }

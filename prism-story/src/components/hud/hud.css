@@ -1,0 +1,45 @@
+.marker {
+  position: absolute;
+  z-index: 40;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+}
+.marker svg { display: block; }
+.marker__red { fill: var(--red); opacity: 0.13; }
+.marker__green { fill: var(--green); opacity: 0.15; }
+.marker__curve { fill: none; stroke: var(--ink); stroke-opacity: 0.55; stroke-width: 1.2; stroke-dasharray: 4 4; }
+.marker__axes { fill: none; stroke: var(--ink); stroke-opacity: 0.4; stroke-width: 1; }
+.marker__dot { fill: var(--ink); }
+.marker__dot--green { fill: var(--green); }
+.marker--frozen { outline: 3px solid var(--blue-soft); filter: saturate(0.4); }
+.marker__readout {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font: 600 9.5px/1 var(--font-mono);
+  color: var(--ink-2);
+}
+.marker__axis { position: absolute; font: 600 9px/1 var(--font-mono); color: var(--ink-2); letter-spacing: 0.04em; }
+.marker__axis--m { left: -2px; top: 50%; transform: rotate(-90deg) translate(0, -100%); transform-origin: 0 0; }
+.marker__axis--a { bottom: -13px; left: 50%; translate: -50% 0; }
+
+.tally {
+  position: absolute;
+  z-index: 40;
+  right: 22px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 14px/1 var(--font-mono);
+  letter-spacing: 0.06em;
+  color: var(--red);
+  background: var(--surface);
+  border: 1.5px solid currentColor;
+  border-radius: var(--radius-chip);
+  padding: 7px 10px;
+  pointer-events: none;
+}
